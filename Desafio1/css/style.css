@@ -1,0 +1,29 @@
+body {
+    background-image: url("../imagens/fundo.png")
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  nav {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .capa {
+    margin: auto;
+    display: block;
+  }
+  .frase {
+    text-align: center;
+  }
+  
+div {
+    width: 900px;
+    margin: auto;
+}

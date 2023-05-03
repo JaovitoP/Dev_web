@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style2.css') }}">
+{% endblock %}
+
+{% block title %}
+        <title>Contato</title>
+{% endblock %}
+
+{% block body %}
+  
+        <h1>Entre em contato</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque voluptas optio cum eum accusantium, sed iure quas nam vel necessitatibus aut veritatis? Optio enim neque dolore incidunt nobis quod natus!</p> <hr>
+        <form method="post" action="/contatos">
+            <p>
+                <label>Seu e-mail:<br><input type="email" name="email" required/></label>
+            </p>
+    
+            <p>
+                <label>Assunto : <br><input type="text" name="assunto" required/></label>
+            </p>
+    
+            <p>
+                <label>Descrição : <br><input type="text" name="descricao" required/></label>
+            </p>
+    
+            <p>
+                <button type="submit">Enviar</button>
+            </p>
+    
+    
+        </form>
+
+{% endblock %}
