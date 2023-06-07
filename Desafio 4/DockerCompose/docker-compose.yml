@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  pythonapp:
+    build: ./Flask/
+    command: sh -c "sleep 10s ; flask run --host 0.0.0.0"
+    links:
+      - "mysql"
+    ports:
+      - '5000:5000'
+    depends_on:
+      - mysql
+
+  mysql:
+    build: ./mysql/
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - my-db:/var/lib/mysql
+    ports:
+      - '3306:3306'
+
+volumes: # add persistent data even if container is removed.
+  my-db:
