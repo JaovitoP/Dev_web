@@ -1,28 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url("../fundo2.png");
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+  color: #333;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  color: #004aad;
+}
+
+p {
+  width: 900px;
+  max-width: 95%;
+  margin: 0 auto 20px auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+ol {
+  width: 900px;
+  max-width: 95%;
+  margin: 0 auto 30px auto;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+hr {
+  width: 900px;
+  max-width: 95%;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   nav {
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .capa {
-    margin: auto;
-    display: block;
+
+  h1 {
+    font-size: 22px;
   }
-  .frase {
-    text-align: center;
+
+  p, ol, hr {
+    width: 95%;
   }
-  
-  p {
-    margin: auto;
-  }
+}
